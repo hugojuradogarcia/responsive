@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tiny Tweaks</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../assets/css/base.css">
+	<style>
+		.tweaks{
+			/*max-width: 768px;*/
+			margin: 0 auto;
+			width: 88%;
+			border: .1em solid blue;
+			padding: 5%;
+			text-align: center;
+			font-size: 16px;
+		}
+		.tweaks-name, 
+		.tweaks-title{
+			font-size: 5em;
+		}
+		.tweaks-username{
+			font-size: 2.5em;
+		}
+		.tweaks-bio{
+			font-size: 2em;
+		}
+		.twaeks-image{
+			max-width: 100;
+			height: auto;
+		}
+		@media screen and ( max-width: 767px ){
+			.tweaks{
+				font-size: 8px;
+			}
+			.tweaks-name{
+				font-size: 2.5em;
+			}
+			.tweaks-username{
+				font-size: 2em;
+			}
+			.twaeks-image{
+				width: 100%;
+				height: auto;
+			}
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="tweaks">
+		<h1 class="tweaks-name">Hugo Jurado</h1>
+		<h2 class="tweaks-username">@hjurado</h2>
+		<img src="hugo.jpg" alt="hugo" width="250" height="250" class="twaeks-image">
+		<h1 class="tweaks-title">Tiny Tweaks</h1>
+		<p class="tweaks-bio">Hola me llamo Hugo y soy Frontend, Tambien doy cursos y consultoria. </p>
+	</div>
+</body>
+</html>
