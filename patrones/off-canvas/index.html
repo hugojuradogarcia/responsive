@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Off Canvas</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../assets/css/base.css">
+	<link rel="stylesheet" href="canvas.css">
+	<style>
+		
+	</style>
+</head>
+<body>
+	<section class="canvas">
+
+		<header class="header verde_A is-active">
+			<h1 class="header-logo">Off Canvas</h1>
+			<button type="button" class="header-botton is-active" id="showmenu">Mostrar MENU</button>
+			<button type="button" class="header-botton" id="hidemenu">Ocultar MENU</button>
+			<ul class="mainmenu" id="menu">
+				<li class="mainmenu-item">
+					<a href="#" class="mainmenu-link">
+						Cursos
+					</a>
+				</li>
+				<li class="mainmenu-item">
+					<a href="#" class="mainmenu-link">
+						Conferencias
+					</a>
+				</li>
+				<li class="mainmenu-item">
+					<a href="#" class="mainmenu-link">
+						Eventos
+					</a>
+				</li>
+				<li class="mainmenu-item">
+					<a href="#" class="mainmenu-link">
+						Contacto
+					</a>
+				</li>
+			</ul>
+		</header>
+
+		<div class="canvas-main verde_B">
+			
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis possimus ut fuga? Totam quo voluptatem illum iure aut magnam, cumque eveniet molestias soluta quaerat, eaque laboriosam a maiores molestiae facere.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, voluptatem? Commodi recusandae nesciunt aspernatur. Quisquam, expedita, ratione! Veritatis ut nobis cum ipsam, maxime similique neque sapiente alias, facere ratione minima!
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat molestias ad repellendus ullam, laborum consequuntur expedita debitis dolorem distinctio sed tenetur, officiis, voluptatum! Earum, temporibus cum magnam quaerat fugiat repellendus.
+		</div>
+		<div class="canvas-sidebar verde_C">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptates debitis consequatur accusantium iure, reiciendis nesciunt eum nisi explicabo quis obcaecati voluptatum sit id porro, iusto perferendis inventore nobis quia!
+		</div>
+	</section>
+	<script src="hammer.min.js"></script>
+	<script>
+		var $buttonShowMenu = document.getElementById('showmenu');
+		var $buttonHideMenu = document.getElementById('hidemenu');
+		var $menu = document.getElementById('menu');
+
+		var $body = document.querySelector('body');
+		// Instancia Hammer
+		var body = new Hammer( $body );
+		// Eventos
+		body.on('tap', function(){
+			console.log("Esto es un tap");
+		})
+
+		var showMenu = function()
+		{
+			$buttonShowMenu.classList.remove('is-active');
+			$buttonHideMenu.classList.add('is-active');
+			$menu.classList.add('is-active');
+		}
+
+		var hideMenu = function()
+		{
+			$buttonShowMenu.classList.add('is-active');
+			$buttonHideMenu.classList.remove('is-active');
+			$menu.classList.remove('is-active');
+		}
+		// Escuchar 
+		$buttonShowMenu.addEventListener( "click", showMenu );
+
+		$buttonHideMenu.addEventListener( "click", hideMenu );
+
+		body.on('panright' , showMenu);
+		body.on('panleft' , hideMenu);
+	</script>
+</body>
+</html>
